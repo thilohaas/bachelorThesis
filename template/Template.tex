@@ -1,0 +1,593 @@
+\documentclass[12pt,a4paper,fleqn]{article}
+
+%% Font
+\usepackage{mathpazo}
+
+%% Mathematics
+\usepackage{amsmath, latexsym}
+
+%% Graphics
+\usepackage{graphicx, rotating}
+
+%% Line spacing
+\usepackage[onehalfspacing]{setspace}
+
+%% Bibliography
+\usepackage{natbib}
+
+\usepackage{booktabs,caption,fixltx2e}
+\usepackage[flushleft]{threeparttable}
+
+\begin{document}
+
+%%%%%%%%%%Bachelorvorlage%%%%%%%%%%%%%
+\newpage
+\vspace*{2cm}
+\begin{center}
+\thispagestyle{empty}
+{\huge The Effect of Immigration on Specialisation of the Native Work Force in Switzerland}\\[1.5cm]
+{\bf \large Bachelor's Thesis}\\
+{\large supervised by the}\\[1cm]
+{\bf \large Department of Economics 
+at the University of Zurich}\\[4pt]
+{\large Prof. Dr. Fabrizio Zilibotti \\[1cm]
+to obtain the degree of \\
+\bf Bachelor of Arts UZH (in Economics)}\\[2cm]
+\begin{tabular}{rl}
+\hline
+Author: & Thilo Haas\\
+Course of Studies: & Economics\\
+Student ID: & 08-910-697\\
+Address: & Hubelstrasse 10\\
+& 6012 Obernau\\
+E-Mail: & thilo.haas@uzh.ch\\
+Closing date: & \today\\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%%End: Bachelorvorlage
+
+%%%%%%%%%%%%%%%%Abstract%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+The Swiss labour market has been significantly affected by immigration during the last decades which led to increasing economic debate about the consequences of immigration.
+\\
+While many studies examined the effects on wages and mostly did not reveal any big impacts, this thesis focuses on the effect of immigration on native work force specialisation through occupational change to more communication intensive tasks in the tradition of \citet{PeriSparber2009}.
+\\
+I will show that immigration forced native workers to pursue more communication and less manual intensive tasks and that this effect increased with the enactment of the Free Movement of Persons Agreement between Switzerland and the European Union in 2002.
+
+
+\end{abstract}
+\newpage
+%%%%%%%%%%%%%%End: Abstract%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%Table of contents %%%%%%%%%%%%%%%
+\tableofcontents
+\newpage
+%%%%%%%%End: Table of contents %%%%%%%%%%%%
+
+\listoffigures
+
+\listoftables
+
+\newpage
+
+%%%%%%%%%%Section One%%%%%%%%%
+\section{Introduction}
+% 1) Motivation
+
+Immigration played an important role in the post-war economic development of Switzerland as the share of foreigners in Switzerland's total population rose from 5\% in 1950 to more than 20\% in recent years.\\
+Therefore the effect of immigration is a broadly discussed topic in Switzerland, as in most advanced economies around the world.\\
+
+Given the observation of occupational upgrading but still low effects on wages in Switzerland, apart from technological change and the effect of trade and off-shoring, the specialisation of the native work force is discussed as another factor supporting these tendencies and broadly discussed in recent literature studies.\\
+
+% 2) Research Question
+This thesis will examine the effects of immigration on specialisation of the native work force in Switzerland and add to the findings of other studies in European countries and the United States.\\ 
+Additionally it will examine if the Free Movement of Persons Agreement with the European Union in 2002 had an effect on the magnitude of immigration effects on specialisation of the native work force.\\
+
+% 3) How to approach research Q & literature relation
+I will give an overview of recent literature findings and explain the patterns of immigration in Switzerland, to put it into the context of other studies and to be able to draw first conclusions about its behaviour.\\
+Following the skill-task model approach of \citet{PeriSparber2009}, I will examine in a regression analysis whether immigration forces native workers to specialise in more communication intensive occupations. I will separately test two time periods before and after the Free Movement of Persons Agreement with the European Union in 2002 and compare the results and their magnitude.\\
+
+\begin{figure}[ht]
+	{
+	\centering
+  		\includegraphics[width=1\textwidth]{data/skillIntensities.eps}
+		\caption{Communication and Manual Task Intensities 1991-2011}
+		\label{fig:skillIntensity}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE data from 1991-2011 and recalculated O*NET abilities by \citet{PeriSparber2009}.\\
+	{\bf Notes:} This graph shows the manual and communication task intensities of native born low and medium educated workers within Switzerland evolving over time.
+\end{figure}
+
+% 4) little conclusion about my results
+As Figure \ref{fig:skillIntensity} suggests through the overall increased communication task intensity, I do find significant effects of immigration on native workers with low and medium education by increasing their absolute and relative supply of communication tasks intensity, suggesting that they indeed are forced to specialise in more communication intensive occupations.\\
+The enactment of the Free Movement of Persons Agreement in 2002 led to an increased effect on communication intensity of tasks supplied by the native work force.\\
+
+% 5) thesis structure
+I will start giving an overview about related literature and how the skill and task based model was developed in the following section 2. Section 3 will then examine the migration patterns of Switzerland focusing on the two key figures, examining immigrants education and their skills. Section 4 introduces the model of \citet{PeriSparber2009}, which later on will be used to empirically test the hypothesis of task specialisation in Switzerland. After describing the relevant datasets and variables in section 5, I will empirically test the assumptions in section 6 with finally giving a conclusion in section 7.
+
+
+%%%%%%%%%%%%%%
+% LITERATURE REVIEW %
+%%%%%%%%%%%%%%
+\section{Literature Review}
+The effects of immigration on natives is a broadly discussed topic among economists and also politically relevant. 
+To understand the importance of workforce specialisation when examining the effects of immigration, I will first give an overview of related literature, how it evolves over time and how economists came up with a skill and task based model, which tries to explain the workforce specialisation. I will then show some results of studies from other countries using the skill-task approach and in the end give some insights, what we would expect from Switzerland.\\
+
+As a first approach many studies examined the effect of immigration on wages with textbook models of competitive labor markets, which led to different and confusing set of results, mainly clustering around zero \citep{FriedbergHund1995}.\\
+
+\citet{Borjas2003} then brought up a differentiated approach of measuring the impact of immigration, by accounting for workers education and work experience, clearing up the confusing array of results from previous studies and leading to consistent results, suggesting that immigration has a negative effect on less-educated native workers. Many studies refer to this model as the skill-cell approach based model.\\
+
+The observation, that in the last decades many highly developed countries experienced an increasing demand for occupations requiring abstract and complex skills together with a decreasing demand in routine and manual ones did not fit into the simple model of education experience cells by \citet{Borjas2003} and led to an increased attention by economists.\\
+These tendencies have been documented for the United States by \citet{AcemogluAutor2010} and for the European Union by \citet{GoosManningSalomons2009} and \citet{OeschMenes2010}.\\
+
+As stated by \citet{DAmuriPeri2010} and summarised by \citet{AcemogluAutor2010}, the main research trying to explain these tendencies focused on two possible explanations: Once the effect of technology in terms of information and communication technologies increasing the productivity of abstract-complex occupations and substituting for manual and routine ones, and the effect of trade and off-shoring, which allows the reallocation of simple and manual production processes abroad, while not affecting complex occupations.\\
+
+Those factors probably being the main contributors to the experienced change in specific occupation demands, \citet{DAmuriPeri2010} adds to it the specialisation of the native work force as another dimension producing a shift in the supply of tasks.\\
+
+\citet{DAmuriPeri2010} stated the requirement of differences in relative efficiency of skills supply between the two groups, to explain the pattern of average native workers increasingly specialising in complex and abstract production tasks while foreign born workers mostly staying unchanged or rather move to manual and routine tasks.\\
+Native and foreign born workers have different comparative advantages and are therefore imperfect substitutes, which was also brought up by \citet{OttavianoPeri2006} and confirmed by \citet{OttavianoPeri2008}.\\
+
+This approach of workforce specialisation is also based on several studies examining the difference between native and foreign born workers. Their conclusion led to imperfect substitution of native and foreign born workers within groups of similar observable characteristics, as in this case education-age groups. Native workers are assumed to possess comparative advantages in complex-abstract and communication skills while foreign born workers are relatively more advanced in manual tasks. The imperfect substitution therefore promotes native work force specialisation in terms of occupational change, due to comparative advantages in individual skills and performed tasks \citep{ManacordaEtAl2006, OttavianoPeri2008, PeriSparber2009}.\\
+
+% MORE JUICE! explaining why focusing on complex/communication tasks? %
+There are several similar studies examining the effects on native work force specialisation. Specialisation for foreign born workers is mostly defined as specialisation in manual and routine tasks, requiring the use of physical skills, whereas native work force specialisation is mostly defined as specialisation in abstract and complex tasks requiring analytical thinking \citep{DAmuriPeri2010}, or in more recent literature communication tasks which require language skills \citep{Peri2009-11}.\\
+
+For the United States \citet{Peri2009-11} using a task based model with communication and manual skill measurements, finds significant evidence, that immigration forces native born workers to specialise in more communication intensive tasks due to their comparative advantage in language skills.\\
+% WHAT DO OTHER COUNTRIES EXPERIENCE? %
+
+For European countries \citet{DAmuriPeri2010}, also using a task based framework with complex-abstract and manual skill definitions, provides empirical evidence that immigration forces the native work force to specialise in occupations requiring more complex-abstract tasks.\\
+
+Switzerland currently does not have any studies focusing on the effect of immigration on native work force specialisation but the effects on native wages and other occupational effects are documented.\\
+
+Generally studying the differences of native and foreign born workers \citet{GerfinKaiser2010} shows that these two groups are imperfect substitutes across education and experience groups in Switzerland. This being the condition for native workers to specialise within the group is therefore given and is one key measurement putting Switzerland inline with experiences from other European countries and the US.\\
+
+Several studies focusing on the effect of immigration on native wages in Switzerland led to no or at most minimal effects as for example \citet{Favre2011}, \citet{GerfinKaiser2010}, \citet{Kueng2005} and \cite{Sheldon2001} showed. Therefore the specialisation of native workers could be one reason, why the immense immigration inflow in Switzerland had no large impact on the wages.\\
+
+Regarding occupations \citet{OeschMenes2010} reveals massive occupational upgrading in European countries and extensively so in Switzerland. This is an increasing demand for workers at the top of the occupational hierarchy, among managers and professionals in business and social services. This effect could also be caused by native workers specialising in these occupations.\\
+
+To sum up, occupational upgrading and the imperfect substitution of native and foreign born workers in Switzerland could have favoured native work force specialisation in Switzerland as a relevant tendency, explaining the low effects of immigration on native wages. In the next section I will thoroughly inspect the recent development of migration patterns within Switzerland to further examine the possibility of native specialisation due to immigration.
+
+%%%%%%%%%%%%%%%
+% MIGRATION PATTERNS  %
+%%%%%%%%%%%%%%%
+\section{Migration Patterns in Switzerland}
+In this section I will describe the migration patterns in Switzerland, to be able to draw conclusions, how Switzerland could be affected in terms of native work force specialisation due to immigration. Important key figures when examining the effect on specialisation are the share of immigrants and their education as well as the distribution across occupations, which I will be focusing on in the next sub sections.\\
+
+Immigration played an important role in the post-war economic development of Switzerland as the share of foreigners in Switzerland's total population rose from 5\% in 1950 to more than 20\% in recent years \citep{Stalder2010}.\\
+
+\begin{figure}[ht]
+	{
+	\centering
+  		\includegraphics[width=1\textwidth]{data/immigrantsShare.eps}
+		\caption{Immigrants Share on Total Population in Switzerland 1991-2011}
+		\label{fig:immShare}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE data from 1991-2011.\\
+	{\bf Notes:} This graph shows the share of foreign born workers within the population of low and medium educated workers in Switzerland evolving over time.
+\end{figure}
+
+The migration patterns in Switzerland drastically changed in the last two decades, where the main source countries of immigration shifted from third countries towards EU27 countries due to the Free Movement of Persons Agreement with the European Union.\\
+
+The immigration flow was and still is always closely connected to the cyclical economic development of Switzerland through the labor demand of companies  \citep{SECO2012}. Figure \ref{fig:immShare} shows the close dependency of immigration share with the economic development in Switzerland as after the crisis in 2001 and 2009 the share of immigrants within Switzerland declined.\\
+
+From 1991 to 2001 Switzerland had a mean net migration of +26'400 per year, whereas immigrants from third countries accounted for 26'000 and only 400 from EU27/EFTA countries.\\
+This pattern radically changed with the enacting of the Free Movement of Persons Agreement with the European Union in june 2002 after which the net migration drastically increased.
+While the yearly mean net migration from EU27/EFTA countries rose to +36'700 from 2002 to 2011, the mean net migration from third countries, stayed nearly unchanged at +25'600 per year \citep{SECO2012}.\\
+
+This increase in net migration and the change of origin countries led to a change in immigrant attainments in terms of education, experience and skills, which I will further examine in the next sub sections.
+
+% IMMIGRATION AND EDUCATION %
+\subsection{Immigration and Education}
+Regarding education, immigrants are overrepresented at the bottom and the top of the education distribution since 2002 as stated by \citet{Favre2011}, \citet{Stalder2010} and others. \\
+Also mentioned by  \citet{SECO2012}, the medium share of immigrants with a tertiary education increased from 38\% in 1994-2002 to 51\% in 2002 - 2010.
+
+\begin{figure}[ht]
+	{
+	\centering
+  		\includegraphics[width=1\textwidth]{data/immigrantsByEducation.eps}
+		\caption{Foreign-born share of workers by education groups}
+		\label{fig1}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE data from 1991-2011.\\
+	{\bf Notes:} Each line shows the share of foreign born workers having the specified education on the total number of foreign born workers within Switzerland. I.e. the solid line in 1991 shows that around 38\% of all foreign born workers in Switzerland have a low education. 
+\end{figure}
+
+As shown in Figure \ref{fig1}, the share of immigrants in Switzerland with a high education rises since 2002 whereas the share of immigrants with low education declined the last years. Still the share of immigrants with medium education is on a high level.\\
+
+
+After the Free Movement of Persons Agreement in 2002, occupations performed by highly educated workers experienced the highest percentage change in foreign-borns share, whereas before the agreement occupations with low and middle educated workers had the highest immigrant inflow (Table \ref{table:iscoGroupStats}). \\
+Also after the agreement both occupations with high and low educated workers are affected by immigration where before mainly occupations with low and middle educated workers were affected.\\
+
+In recent literature about task specialisation this observation of high skilled foreign born workers inflow is relatively new. It is supposed to behave like \citet{PeriSparber2010} stated for the United States, where highly educated immigrants forced native workers to choose new occupations with less analytical and more communicative content. Therefore looking at task specialisation in terms of manual and communication skills should be an adequate instrument for Switzerland.\\
+
+While many countries still experience mainly low educated immigrant inflows, Switzerland with its increased share of highly educated immigrants suggests a even stronger competition for native workers of all occupation groups because of the comparable education attainment. I will therefore use the communication task intensity of native workers as a key measurement for native workers specialisation, as its communication and language skills are supposed to be one of the main differences between natives and foreign borns.
+
+% IMMIGRATION AND SKILLS %
+\subsection{Immigration and Skills}
+
+The foreign born's share in occupations requiring high skills and education steadily rose during the last decades (Figure \ref{figIsco}).\\
+During the years from 1991 to 2002, the share of foreign born workers rose in all occupation groups except the professionals and elementary occupation groups. Whereas after 2002 all high and low ranked occupations experienced a higher foreign borns share while the share felt in occupations ranked in the middle like clerks and service workers.\\
+
+\begin{figure}[ht]
+	{
+		\centering
+  		\includegraphics[width=1\textwidth]{data/immigrantsIsco.eps}
+		\caption{Foreign-born share of workers by ISCO mayor groups}
+		\label{figIsco}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE data from 1991, 2002 and 2011.\\
+	{\bf Notes:} This graph shows the evolvement of the share of foreign born workers on total population within the ISCO Mayor Groups over time. I.e. in 1991 around 14\% of all workers within the ISCO mayor group "1) Legislators,..." are foreign born. In section \ref{titleData} the ISCO occupation groups are described in detail.
+\end{figure}
+
+Figure \ref{figIsco} also reflects the significant increase in high educated immigrants, taking occupations in the upper ISCO mayor groups reflecting the higher skill intensity and therefore the immigrants compete with high skilled native workers which is also shown in Table \ref{table:iscoGroupStats}.\\
+
+This observation is expected, due to the increased share of highly educated immigrants and otherwise inline with observations in other countries experiencing native work force specialisation due to immigration.\\
+
+Figure \ref{figIsco} clearly shows the increased foreign born share throughout all occupation groups. For further analysis these broadly defined mayor groups are too rough. Looking at sub-mayor groups in Table \ref{table:iscoGroupStats}, it is already a little bit refined and the relation between foreign borns share and the communication-manual task intensity ratio can be seen. Therefore native workers gather among occupations with a high communication-manual intensity ratio, signed by the decreasing share of foreign born workers.\\
+
+We can therefore expect, Switzerland to behave similarly to other observations and thus the immigration leading to native work force specialisation in terms of moving to more communication intense tasks.
+
+
+%%%%%%%%%%
+%        MODEL       %
+%%%%%%%%%%
+\section{The Model}
+
+% PRODUCTION FUNCTION %
+\subsection{Production Function}
+I will follow the work from \citet{PeriSparber2009} which provides a simple general equilibrium model of comparative advantages in task performance.
+I will shortly describe the model on the next pages and then test the key implications of the model in the following sections.\\
+
+Beginning with a constant elasticity of substitution (CES) production function which combines two non-tradable intermediate services, $Y_H$ and $Y_L$ to produce a final tradable good $Y$ in a perfect competitive market with cost minimisation and zero profits.
+
+\begin{equation}\label{eq:1}
+	Y=[\beta Y^{\frac{\sigma-1}{\sigma}}_L + (1-\beta)Y_H^{\frac{\sigma-1}{\sigma}}]^{\frac{\sigma}{\sigma-1}}
+\end{equation}
+
+Whereas $\sigma \in (0,\infty)$ measures the elasticity of substitution between $Y_H$ and $Y_L$ and $\beta$, $(1-\beta)$ captures their relative productivity.\\
+$Y_H$ / $Y_L$ is provided by high/low educated workers ($H$ and $L$) which are defined by workers with secondary education (Matura / Lehre) or less and workers with a tertiary education (university) or more.\\
+
+The model further assumes that in the production of $Y_L$ less-educated workers perform two types of tasks: manual ($M$) and communication ($C$). Manual tasks require the use of physical skills and communication tasks require language skills. Both tasks are combined in a CES function to $Y_L$ with $\theta_L \in (0, \infty)$ measuring their elasticity of substitution and $\beta_L \in (0,1)$ the relative productivity of manual skills.
+
+\begin{equation}\label{eq:2}
+	Y_L = [\beta_L M^\frac{\theta_L-1}{\theta_L} + (1-\beta_L)C^\frac{\theta_L-1}{\theta_L}]^\frac{\theta_L}{\theta_L-1}
+\end{equation}
+
+Highly educated workers are assumed to only perform analytical tasks that is communication and analytical skills, which are assumed highly substitutable, or are based on the idea that highly educated workers are not affected much by the presence of less educated immigrants, what \citet{PeriSparber2009} showed empirically. Therefore the Production function of highly educated workers is given by $Y_H = H$.
+
+Supposing a competitive labor market and perfect competition, the relative task demand can be expressed by equation (\ref{eq:3}).
+
+\begin{equation}\label{eq:3}
+	\frac{C}{M} = (\frac{1-\beta_L}{\beta_L})^{\theta_L}(\frac{w_C}{w_M})^{-\theta_L}
+\end{equation}
+
+
+% RELATIVE SUPPLY OF TASKS %
+\subsection{Relative Supply of Tasks}
+The wage paid to highly educated workers equals the marginal productivity of $Y_H$ in (\ref{eq:1}): $w_H = P_H$.\\
+Allowing heterogeneity between less educated workers in terms of relative task productivity let us account for native / domestic ($L_D$) and foreign born ($L_F$) less educated workers.\\
+
+Each less educated worker provides communication ($\zeta_i$ with $i = \{L_F, L_D\}$) and manual ($\mu_i$) tasks.\\
+Further $(\zeta_D/\mu_D) > (\zeta_F/\mu_F)$ is assumed to indicate the comparative advantage in communication tasks for native low educated workers.\\
+
+If a worker has to choose to spend his endowment (time) on to the two different types of tasks, let $l_i$ be the time spent on performing manual tasks and $(1-l_i)$ the time spent on communication tasks. We then have $m_i = (l_i)^\delta\mu_i$ and $c_i = (1-l_i)^\delta\zeta_i$ as the supply of manual and communication task units, with $\delta \in (0,1)$ accounting for decreasing returns form performing a single task to ensure no one will fully specialise.\\
+
+Finally each less educated worker maximises his labor income $w_D$ and $w_F$ respectively, by dividing his endowment into communication and manual tasks, as given by equations (\ref{eq:4}) and (\ref{eq:5}). To account for the difference of foreign born and native workers, foreign borns get a fraction of their marginal productivity $(1-d) \in [0.1]$.
+
+\begin{eqnarray}
+	\label{eq:4}
+	w_D = (l_D)^\delta \mu_D w_M + (1-l_D)^\delta \zeta_D w_C
+	\\
+	\label{eq:5}
+	w_F = (1-d)(l_F)^\delta \mu_F w_M + (1-l_F)^\delta \zeta_F w_C
+\end{eqnarray}
+
+By maximising the wages in respect to $l_i$, the equilibrium relative task supply for each type of worker (D or F) is given by equation (\ref{eq:6}) and the relative time spent on the two type of tasks by equation (\ref{eq:7}).
+
+\begin{eqnarray}
+	\label{eq:6}
+	\frac{c_i}{m_i} = (\frac{w_C}{w_M})^\frac{\delta}{1-\delta}(\frac{\zeta_i}{\mu_i})^\frac{\delta}{1-\delta}
+	\\
+	\label{eq:7}
+	\frac{l_i}{1-l_i} = (\frac{\zeta_i w_C}{\mu_i w_M})^\frac{1}{\delta-1}
+\end{eqnarray}
+
+This model provides a one-to one identifying relationship between relative efficiency in manual/communication tasks ($\zeta_i$,$\mu_i$) and occupational choice of workers of type $i$.\\
+
+As in these simplified model there is no differentiation of abilities within the two types of workers $i$ , $\mu_D$/$\zeta_D$ is the endowment of all native workers and $\mu_F$/$\zeta_F$ the endowment of foreign born workers.\\
+Each group will change their occupation if the relative compensation of tasks changes.\\
+The product of individual task supply and total labor supply will be the aggregate task supply ($M_i = L_i m_i$ and $C_i = L_i c_i$).\\
+
+Summing the task supply provided by each group will lead to the aggregate relative supply of tasks in the economy described by (\ref{eq:8}) with $\phi(f) = (M_F/(M_F+M_D)) \in (0,1)$ as the share of manual tasks supplied by foreign-born workers given by a simple monotonically increasing transformation of the foreign-born share of less educated workers.
+
+\begin{equation}\label{eq:8}
+	\frac{C}{M_D} = \frac{C_F + C_D}{M_F + M_D} = \phi(f)\frac{C_F}{M_F} + (1-\phi(f))\frac{C_D}{M_D}
+\end{equation}
+
+
+With (\ref{eq:6}), (\ref{eq:8}) and equating relative supply and demand the equilibrium relative compensation of tasks is given by (\ref{eq:9}) with the function $\frac{\zeta}{\mu}(f, \frac{\zeta_F}{\mu_F})$ as the weighted average of relative skill endowments among the two worker groups (natives and immigrants), representing an aggregate measure of communication relative to manual ability in the economy. $\frac{\zeta}{\mu}(f, \frac{\zeta_F}{\mu_F})$ depends negatively on $f$ and positively on $\frac{\zeta_F}{\mu_F}$.
+
+\begin{equation}\label{eq:9}
+	\frac{w_C^*}{w_M^*} = (\frac{1-\beta_L}{\beta_L})^\frac{(1-\delta)\theta_L}{(1-\delta)\theta_L+\delta}[\frac{\zeta}{\mu}(f, \frac{\zeta_F}{\mu_F})]^\frac{-1}{(1-\delta)\theta_L+\delta}
+\end{equation}
+
+By substituting (\ref{eq:9}) into the aggregate relative supply for domestic workers we find the relative provision of tasks equilibrium in (\ref{eq:10}) and the aggregated equilibrium in (\ref{eq:11}).
+
+\begin{equation}\label{eq:10}
+	\frac{C_D^*}{M_D^*} = (\frac{1-\beta_L}{\beta_L})^\frac{\delta\theta_L}{(1-\delta)\theta_L+\delta}(\frac{\zeta_D}{\mu_D})^\frac{1}{(1-\delta)}[\frac{\zeta}{\mu}(f, \frac{\zeta_F}{\mu_F})]^{\frac{-1}{(1-\delta)\theta_L+\delta}\frac{\delta}{1-\delta}}
+\end{equation}
+
+
+\begin{equation}\label{eq:11}
+	\frac{C^*}{M^*} = (\frac{1-\beta_L}{\beta_L})^\frac{\delta\theta_L}{(1-\delta)\theta_L+\delta}[\frac{\zeta}{\mu}(f, \frac{\zeta_F}{\mu_F})]^\frac{\theta_L}{(1-\delta)\theta_L+\delta}
+\end{equation}
+
+
+% MODEL PREDICTIONS %
+\subsection{Model Predictions}
+After explaining the model, I will now show how it predicts the impact of immigration on the specialisation of the native work force by their relative supply of communication versus manual tasks.\\
+
+An increasing share of foreign borns in the population affects the model first through relative scarcity of native workers and their communication skills which increases the relative return of communication versus manual tasks, which is shown in equation (\ref{eq:9}).
+This affects equation (\ref{eq:10}) through an increased incentive, because of the higher wage return for native workers, to provide more communication tasks, which leads to an increase of the relative supply of communication tasks by natives.\\
+
+Now the equation needs to be standardised, to be able to test it against real world datasets.
+This is done by log-linearising the key equilibrium conditions in (\ref{eq:10}). We then obtain equation (\ref{eq:12}) which maps the relative communication intensity provided by native born less-educated workers to the foreign-born share in the population.
+
+\begin{equation}\label{eq:12}
+	ln(\frac{C_D}{M_D})_{rt} = \gamma f_{rt} + \alpha^D_r + \tau^D_t + \epsilon^D_{rt}
+\end{equation}
+
+Where $\epsilon^D_{rt}$ is the non-correlated zero-mean disturbance term, $\tau^D_t$ the time fixed effects accounting for time-varying technological parameters and $\alpha^D_r$ region fixed effects accounting for variation due to unobserved population characteristics. $\gamma$ represents the key model implications from equation (\ref{eq:12}), $\gamma = -(1/((1-\delta)\theta_L + \delta))(\delta/(1-\delta)) \times (\partial ln(\zeta/\mu)/\partial f)$.\\
+
+The model predicts $\gamma$ to be positive, because in equation (\ref{eq:10}) the foreign-borns share of less-educated workers ($f_{rt}$) within a region causes native workers to increase their relative supply of communication tasks.\\
+
+Therefore accounting for region and year fixed effects a 1 percentage point increase in the share of foreign born workers within the region-year less educated workers is supposed to lead to a $\gamma$ percent increase in relative communication to manual task supply by natives within the same group.
+
+
+%%%%%%%%%%
+%          DATA         %
+%%%%%%%%%%
+\section{Data and Descriptive Statistics} \label{titleData}
+The main dataset used in this thesis is the Swiss Labour Force Survey (SAKE) from 1991 to 2011\footnote{http://www.bfs.admin.ch/bfs/portal/en/index/infothek/erhebungen\_\_quellen/\\
+blank/blank/enquete\_suisse\_sur/uebersicht.html}.
+It is a yearly household survey conducted for the first time in 1991 and provides information on the structure of the labour force and employment behaviour patterns. It is a telephone survey with around 126'000 interviews per year and therefore because of the small sample size not very accurate on a detailed level but because of the rich information perfectly suitable for aggregated analysis.\\
+% Bla bla Ÿber SAKE fragebogen & datenerfassung %
+% dataset: coverage, strength, weaknesses,.. %
+
+For the regression analysis I need data on foreign born's share, canton of living, year of data collection, age, education and individuals occupation.\\
+
+The analysis is restricted to the two periods 1991-2001 and 2002-2011 and only contains individuals in working age from 18 to 64 years old with a positive amount of hours worked and low or medium education.\\
+Because of the large increase of highly educated foreign-born workers, I will focus on the low and medium educated population only, as this phenomenon of highly educated immigrant inflow could be handled in a separate study.\\
+
+% what are occupation groups? %
+Individuals occupations in Switzerland are coded using the ISCO-88 framework provided by the European Union.
+ISCO-88 organises the occupations in a hierarchical framework, with a job at the lowest level as the unit of classification. 
+Jobs are grouped to occupations according to the degree of similarity in their constituent tasks and duties. ISCO-88 provides four levels of aggregation. An extensive description and a list of the different levels of occupation grouping is available on their website\footnote{http://www2.warwick.ac.uk/fac/soc/ier/research/links/isco88/}.\\
+For our purpose the matching of communication and manual task intensities is done on the lowest ISCO-88 aggregation level on the 4 digit unit groups.\\
+
+The SAKE education variable provides 3 education groups: high school or less, secondary school and tertiary education like university and college. For the analysis I will follow \citet{PeriSparber2009} and focus only on low and middle education groups.\\
+
+Individuals in the SLFS dataset which are identified as foreign born are classified as immigrants.\\
+
+Finally skill measures are supplied by the US Department of Labor's O*NET abilities survey.
+The O*NET is a widely used database which describes occupational features including ability measures. Because of its mapping to US job titles, it is mainly used with US census data. Since there are some crosswalks mapping the US job titles to the standardised ISCO-88 occupation codes, there are some recent studies using the O*NET occupation features database because of its rich information also with European datasets \citep{CifuentesEtAl2010}.\\
+The O*NET database assigns for each occupation group numerical values to 52 distinct employee abilities. These abilities are used as tasks and skill measures and the provided numbers are recalculated to be comparable across occupations and mapped to the US SOC 1990 codes by  \citet{PeriSparber2009}\footnote{data available on https://www.aeaweb.org/articles.php?doi=10.1257/app.1.3.135}.\\
+After the recalculation a value of 0.02 in a specific skill means, that only 2 percent of all workers in the US in 2000 are supplying that specific skill less often.\\
+For the analysis some of these skills are grouped together in manual skills containing strength, dexterity, body coordination and flexibility and communication skills containing oral and written expression and comprehension.\\
+% why exactly manual and communication skills? %
+
+\begin{figure}[ht]
+	{
+		\centering
+	  	\includegraphics[width=1\textwidth]{data/iscoSkills.eps}
+		\caption{Task intensities by ISCO mayor groups}
+		\label{figSkill}
+	}
+	\small
+	{\bf Source:} Author's calculations on \citet{PeriSparber2009} abilities dataset being recalculations of the O*NET abilities survey.\\
+	{\bf Notes:} This graph shows the relative and absolute task intensities of communication and manual skills within the ISCO mayor groups.
+\end{figure}
+
+
+In the analysis I will build upon these pre calculated variables as measures of communication and manual task intensity of occupations. As this data is mapped to US SOC codes, I will use the crosswalk by Paul Lambert (2003)\footnote{http://www.camsis.stir.ac.uk/occunits/us90toisco88v2.sps} to map US SOC codes to ISCO 88 codes which are provided by the SAKE dataset. 
+The abilities dataset uses the detailed US SOC codes which is then mapped to 4 digit ISCO-88 codes.
+A full list of occupations mappings can be found in the Appendix Table \ref{table:socToIsco}.\\
+% other european countries used onet data and matched to isco codes? %
+% explain matching: on what code level do i match? ...%
+% what are the underlying assumptions of matching? %
+
+
+Focusing on ISCO mayor occupation groups the communication-manual task intensities ratio rises with the occupation complexity and skill level. The ratio is highest within legislators, senior officials and managers and lowest within elementary occupations and plant and machine operators and assemblers (Figure \ref{figSkill}).\\
+% say why it's relevant for this thesis? %
+
+\begin{table}[ht]
+	\centering
+	\caption{Descriptive Variable Statistics for the Years 2002-2011}   \label{table:descStat}
+	\include{data/descStatTable}
+\end{table}
+
+% EXPLAIN how do i aggregate data for regression? %
+The individual data is aggregated by Swiss cantons on a yearly basis. Therefore we have eleven years from 1991-2001 and ten years from 2002-2011 with each 26 Swiss cantons.\\
+% further explain construction of regions: why? (language => evtl. commuting areas, bigger regions, geographical locations) %
+Because of the relative small sample size and small geographical dimensions of the Swiss cantons I will additionally group the aggregated dataset into three broadly defined regions which I will use as dummy variables to control for regional differences.\\
+The region variable is constructed with cantons grouped by geographical location which are also broadly connected by their native language (german, italian and french). Therefore I work with three regions where the cantons Waadt, Wallis, Neuenburg, Genf and Jura build the north-western region, the canton Tessin the southern region and all others the north-eastern region. This grouping is also based on the idea that workers will most probably not swap across language barriers.\\
+
+% TODO: HUGE table of descript. stats of used variables (mean, variance,.. variance within regions/cantons,..) %
+A descriptive statistic table of all data variables used in this thesis for the regression analysis is shown in Table \ref{table:descStat}.
+
+
+%%%%%%%%%%%%%%
+%  EMPIRICAL RESULTS %
+%%%%%%%%%%%%%%
+\section{Empirical Results}
+
+This section will empirically test the relationships of foreign born workers share and the native communication and manual task intensities within the medium and low educated population of Switzerland.\\
+I will use the empirical specification of equation (\ref{eq:12}) identified by the theoretical model.\\
+
+The regression is done using least squares and weighting each observation by employment in the cell, to account for variations in labor market sizes across cantons. Standard errors are clustered by canton.\\
+
+Additionally I am testing whether immigration has a strong relationship with the average native born workers supply of communication tasks with equation (\ref{eq:communication}) and manual tasks with equation (\ref{eq:manual}).
+
+\begin{eqnarray}
+	\label{eq:communication}
+	ln(c_D)_{rt}=\alpha_{r}^C + \tau_t^C + \gamma_t^C * f_{rt} + \epsilon^C_{rt}\\
+	\label{eq:manual}
+	ln(m_D)_{rt}=\alpha_{r}^M + \tau_t^M + \gamma_t^M * f_{rt} + \epsilon^M_{rt}
+\end{eqnarray}
+
+\begin{figure}[ht]
+	{
+		\centering
+		\includegraphics[width=1\textwidth]{data/immigrantsRelativeBasic.eps}
+		\caption{Foreign-born share of workers and logarithm of relative communication-manual tasks intensity}
+		\label{figRegression}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE data from 2002-2011 and recalculated O*NET abilities data from \citet{PeriSparber2009}.\\
+	{\bf Notes:} This Graph shows the relationship between the logarithm of relative communication-manual task intensity of native workers and the foreign born's share within low and medium educated workers.
+\end{figure}
+
+The regression will use region dummies to account for variations across these broadly specified regions as \citet{PeriSparber2009} did with state dummies on US data, which was not applicable for Swiss data because of the small sample sizes within Swiss cantons and therefore this effect should be caught by the constructed three regions. 
+\citet{Borjas2003, Borjas2006}, \citet{Favre2011} and others suggested that effects of immigration could dissipate across the whole country which could be especially true for small scale Switzerland, but \citet{Card2001} and others argue for the use of region dummies and didn't experience any dissipation effects. Therefore I will run the regressions once with and once without region dummies.\\
+Additionally including a yearly dummy variable will account for year specific effects.\\
+
+Figure \ref{figRegression} shows the relationship between the logarithm of relative communication-manual task intensity of native workers and the foreign born's share within low and middle educated workers which I am going to estimate.\\
+
+The WLS regression estimates of $\gamma$, $\gamma^C$ and $\gamma^M$ are displayed in Table 1 where the columns (2) and (4) includes region and year dummies and (1) and (3) are limited to year dummies. Column (1) and (2) analysed the period from 1991-2001 while column (3) and (4) analyses the data from 2002-2011. All regressions cluster standard errors on the 26 Swiss cantons.\\
+Detailed regression results are listed in the Appendix in Table \ref{table:regWithoutRegions1991} to \ref{table:regWithRegions2002}.\\
+
+\begin{table}[ht]
+	{
+		\centering
+		\caption{Foreign born workers and the native supply of tasks}
+		\label{table1}
+		\include{data/table1}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE data from 1991-2011 and recalculated O*NET abilities data from \citet{PeriSparber2009}.\\
+      	{\bf Notes:} Dependent Variable: Foreign born's share of workers with medium and low education in the region and year. Regressions are done on a dataset aggregated on a canton and year level.  Each cell contains estimates from a separate regression with standard errors clustered by the 26 Swiss cantons.  Standard errors are reported in parenthesis.
+	To construct the average manual $m_D$ and communication $c_D$ skill supply by native workers in a region-year, I first run individual regressions to control for age, gender, experience, and race. The hours-weighted region average of this "cleaned" supply represents the values $c_D$ and $m_D$ and $C_D/M_D$ is their ratio.\\
+      	* $p \leq 0.10$ ** $p \leq 0.05$ *** $p \leq 0.01$
+\end{table}
+
+All regressions do provide significant results, suggesting that an increased immigration does affect the native work force by increasing their supply of communication tasks and decreasing the manual tasks supply as all estimates of $\gamma$ are significant and positive.\\
+Therefore immigration seems to force native workers to specialise in more communication task intensive occupations.\\
+Regarding the Region dummies they mostly seem to be insignificant or only significant on a low level and could therefore be omitted or should be replaced by a more accurate measurement as for example commuting regions.\\
+
+Column (1) suggests that a 1 percentage-point increase in the foreign-born share of less and medium educated workers is associated with an 1.23 percent increase in the relative supply of communication-manual tasks within native workers of the same group.
+This effect is pretty high compared to results of studies within the United States and should therefore be interpreted carefully and further analysed. The important results nevertheless are the significant positive estimations of $\gamma$ and the significant increase of the estimators after the Free Movement of Persons Agreement in 2002.\\
+
+Comparing the two time periods, before and after the Free Movement of Persons Agreement in 2002, the effect of immigration on communication and manual task intensities of native workers strongly increased and suggests a even stronger specialisation of native workers when affected by immigration since 2002.\\
+Therefore the changed immigration patters led to an increase in communication specialisation, a decrease in manual task intensity and a increased relative supply, which could be explained by the increased competition through the increased net migration and also increased demand for managing the new immigrated workers which requires communication skills.\\
+The exact source of the increased magnitude of immigration effects could be part of future research efforts.
+
+%%%%%%%%%%%
+%  CONCLUSIONS  %
+%%%%%%%%%%%
+\section{Conclusion}
+The Swiss labour market has been significantly affected by immigration during the last decades which led to increasing economic debate about the consequences of immigration. Many of the studies examined the effects of immigration on native wages but did not find large effects. Given the huge immigration inflow and the low wage effects, the model of specialisation of the native workforce could provide an explanation for the low wage effects.\\
+
+In this thesis I will examine the extent of task specialisation of the native work force due to immigration in Switzerland. Using the simple task based model from \citet{PeriSparber2009} as an explanatory framework, this thesis provides new empirical evidence for Switzerland.\\
+
+Using the SAKE data from 1991 to 2011 merged with the O*NET abilities survey to measure the task content of occupations, I find significant results suggesting that, within low and middle educated workers, immigration indeed forces native workers to specialise in occupations with more communication intensive task contents.\\
+
+With the enacting of the Free Movement of Persons Agreement with the European Union in 2002 the magnitude of these effects drastically increased, pushing native workers to even more communication intensive tasks.
+
+
+%%%%%%%%%%%Bibliography%%%%%%%%%%%
+\newpage
+
+
+\bibliographystyle{agsm}
+\bibliography{referenzen}
+
+\newpage
+
+\begin{appendix}
+%%%%%%%%%%%Vorlagen%%%%%%%%%%%%%%%%%
+\section{Appendix}
+\setcounter{table}{0}
+\numberwithin{table}{section}
+
+% APPENDIX: table about ISCO mayor groups & TABLE about SOC->ISCO88 matching & TABLE about canton->region matching %
+
+\begin{table}[ht]
+	\centering
+	\caption{ISCO sub-mayor groups ranked by change in foreign-born's share }
+	\label{table:iscoGroupStats}
+	\include{data/table2}
+\end{table}
+
+
+\begin{table}[ht]
+	\centering
+	\caption{Mapping of US SOC 90 occupation codes to ISCO-88 codes}
+	\label{table:socToIsco}
+	\include{data/socToIsco}
+\end{table}
+
+
+\begin{table}[ht]
+	{
+		\centering
+		\caption{Foreign Born Workers and the Native Supply of Tasks without region dummies 1991-2001}
+		\label{table:regWithoutRegions1991}
+		\include{data/regressWithoutRegions1991}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE 1991-2001 and recalculated O*NET abilities data from \citet{PeriSparber2009}.\\
+	{\bf Note:} Fixed effects regressions clustered by cantons. Standard errors are reported in parenthesis. $f$ is the foreign born's share of workers with medium and low education within the year canton cell and y* the yearly dummies for 1991-2001.\\
+      	* $p \leq 0.10$ ** $p \leq 0.05$ *** $p \leq 0.01$
+\end{table}
+
+
+\begin{table}[ht]
+	{
+		\centering
+		\caption{Foreign Born Workers and the Native Supply of Tasks with region dummies 1991-2001}
+		\label{table:regWithRegions1991}
+		\include{data/regressWithRegions1991}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE 1991-2001 and recalculated O*NET abilities data from \citet{PeriSparber2009}.\\
+	{\bf Note:} Fixed effects regressions clustered by cantons. Standard errors are reported in parenthesis. $f$ is the foreign born's share of workers with medium and low education within the year canton cell, r* are the region dummies and y* the yearly dummies for 1991-2001.\\
+      	* $p \leq 0.10$ ** $p \leq 0.05$ *** $p \leq 0.01$
+\end{table}
+
+\begin{table}[ht]
+	{
+		\centering
+		\caption{Foreign Born Workers and the Native Supply of Tasks without region dummies 2002-2011}
+		\label{table:regWithoutRegions2002}
+		\include{data/regressWithoutRegions}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE 2002-2011 and recalculated O*NET abilities data from \citet{PeriSparber2009}.\\
+	{\bf Note:} Fixed effects regressions clustered by cantons. Standard errors are reported in parenthesis. $f$ is the foreign born's share of workers with medium and low education within the year canton cell and y* the yearly dummies for 2002-2011.\\
+      	* $p \leq 0.10$ ** $p \leq 0.05$ *** $p \leq 0.01$
+\end{table}
+
+
+\begin{table}[ht]
+	{
+		\centering
+		\caption{Foreign Born Workers and the Native Supply of Tasks with region dummies 2002-2011}
+		\label{table:regWithRegions2002}
+		\include{data/regressWithRegions}
+	}
+	\small
+	{\bf Source:} Author's calculations on SAKE 2002-2011 and recalculated O*NET abilities data from \citet{PeriSparber2009}.\\
+	{\bf Note:} Fixed effects regressions clustered by cantons. Standard errors are reported in parenthesis. $f$ is the foreign born's share of workers with medium and low education within the year canton cell, r* are the region dummies and y* the yearly dummies for 2002-2011.\\
+      	* $p \leq 0.10$ ** $p \leq 0.05$ *** $p \leq 0.01$
+\end{table}
+
+
+\end{appendix}
+
+\end{document}

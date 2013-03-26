@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+*.synctex.gz
+*.toc
+*.blg
+*.bbl
+*.aux
+*.lof
+*.lot
+papers/*
+books/*
+thilosake.tar.gz
